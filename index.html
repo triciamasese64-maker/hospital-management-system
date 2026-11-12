@@ -1,0 +1,537 @@
+-<!DOCTYPE html>
+<html>
+<head>
+    <title>Tricia Luqman Catherine</title>
+    <style>
+        .payment-options {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+        }
+
+        .cash-section,
+        .mobile-section {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .mobile-choice {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #cashDetails {
+            display: none;
+        }
+
+#mobilePayment {
+    display: none;
+}
+        input::placeholder {
+            color: purple;
+        }
+
+        body {
+            background-color: cyan;
+            color: blue;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        form {
+            background-color: violet;
+            padding: 25px;
+            border-radius: 10px;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: cyan;
+        }
+
+        .logo {
+            text-align: center;
+            color: cyan;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: maroon;
+            font-size: 35px;
+        }
+
+        input, select {
+            padding: 8px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media(max-width: 650px) {
+            .row {
+                flex-wrap: wrap;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<form id="patientForm">
+
+    <!-- LOGO -->
+
+    <div class="logo">
+        <span>✚</span>
+        PATIENT CARE
+    </div>
+
+    <h1>PATIENT REGISTRATION FORM</h1>
+
+    <div style="display:flex; gap:30px; align-items:center;">
+
+        <div>
+            <label>Patient ID (NHIF CARD NO)</label>
+            <br><br>
+            <input type="text" id="patientID">
+        </div>
+
+        <div>
+            <label>Registration Date</label>
+            <br><br>
+            <input type="date" id="registrationDate">
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <label>Patient name</label>
+
+    <br><br>
+
+    <div class="row" style="display:flex; gap:30px; align-items:center;">
+
+        <input type="text" id="firstName" placeholder="first name">
+
+        <input type="text" id="surname" placeholder="surname">
+
+        <input type="text" id="middleName" placeholder="middle name">
+
+    </div>
+
+    <br><br>
+
+    <div style="display:flex; gap:50px; align-items:center;">
+
+        <div>
+
+            <label>Gender</label>
+
+            <br><br>
+
+            <div style="display:flex; gap:20px; align-items:center;">
+
+                <label>
+                    <input type="radio" name="gender" value="Male"> Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="Female"> Female
+                </label>
+
+            </div>
+
+        </div>
+
+        <div>
+
+            <label>Birth Date</label>
+
+            <br><br>
+
+            <input type="date" id="birthDate">
+
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <label>Address</label>
+
+    <br><br>
+
+    <input type="text" id="street" placeholder="Street Address">
+
+    <br><br>
+
+    <!-- CITY, REGION AND COUNTRY ON ONE LINE -->
+
+    <div class="row" style="display:flex; gap:15px; align-items:center;">
+
+        <input type="text" id="city" placeholder="City">
+
+        <select id="region">
+
+            <option value="">Region</option>
+            <option>Arusha</option>
+            <option>Dar es Salaam</option>
+            <option>Dodoma</option>
+            <option>Geita</option>
+            <option>Iringa</option>
+            <option>Kagera</option>
+            <option>Kaskazini Pemba</option>
+            <option>Kaskazini Unguja</option>
+            <option>Katavi</option>
+            <option>Kigoma</option>
+            <option>Kilimanjaro</option>
+            <option>Pemba</option>
+            <option>Unguja</option>
+            <option>Lindi</option>
+            <option>Manyara</option>
+            <option>Mara</option>
+            <option>Mbeya</option>
+            <option>Mjini Magharibi</option>
+            <option>Morogoro</option>
+            <option>Mtwara</option>
+            <option>Mwanza</option>
+            <option>Njombe</option>
+            <option>Pwani</option>
+            <option>Rukwa</option>
+            <option>Ruvuma</option>
+            <option>Shinyanga</option>
+            <option>Simiyu</option>
+            <option>Singida</option>
+            <option>Songwe</option>
+            <option>Tabora</option>
+            <option>Tanga</option>
+
+        </select>
+
+        <select id="country">
+
+            <option value="">Country</option>
+            <option>Afghanistan</option>
+            <option>Albania</option>
+            <option>Algeria</option>
+            <option>Angola</option>
+            <option>Argentina</option>
+            <option>Australia</option>
+            <option>Austria</option>
+            <option>Bangladesh</option>
+            <option>Belgium</option>
+            <option>Brazil</option>
+            <option>Canada</option>
+            <option>China</option>
+            <option>Egypt</option>
+            <option>France</option>
+            <option>Germany</option>
+            <option>Ghana</option>
+            <option>India</option>
+            <option>Indonesia</option>
+            <option>Italy</option>
+            <option>Japan</option>
+            <option>Kenya</option>
+            <option>Malawi</option>
+            <option>Malaysia</option>
+            <option>Mozambique</option>
+            <option>Nigeria</option>
+            <option>Rwanda</option>
+            <option>South Africa</option>
+            <option>South Sudan</option>
+            <option>Tanzania</option>
+            <option>Uganda</option>
+            <option>United Kingdom</option>
+            <option>United States</option>
+            <option>Zambia</option>
+            <option>Zimbabwe</option>
+
+        </select>
+
+    </div>
+
+    <br><br>
+
+    <label>Patient's phone number</label>
+
+    <br><br>
+
+    <input type="tel" id="phone">
+
+    <br><br>
+
+    <p>Medication Information</p>
+
+    <label>Please list any medications you are currently taking</label>
+
+    <br><br>
+
+    <input type="text" id="medications">
+
+    <br><br>
+
+    <label>Please list any allergies</label>
+
+    <br><br>
+
+    <input type="text" id="allergies">
+
+    <br><br>
+
+    <div style="display:flex; gap:10px; align-items:center;">
+
+        <p>Physician name:</p>
+
+        <input type="text" id="physician">
+
+    </div>
+
+    <br><br>
+
+    <div style="display:flex; gap:10px; align-items:center;">
+
+        <div>
+
+            <label>Physician no/Office no:</label>
+
+            <input type="number" id="officeNumber">
+
+        </div>
+
+        <div>
+
+            <label>Phone number:</label>
+
+            <input type="tel" id="physicianPhone">
+
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <!-- METHODS OF PAYMENT -->
+
+    <p>Methods of Payment</p>
+
+    <div class="payment-options">
+
+        <div class="cash-section">
+
+            <label>
+                <input type="radio" name="payment"
+                value="Cash" id="cash">
+                Cash
+            </label>
+
+            <div id="cashDetails">
+
+                <p>
+                    <label>Amount Paid:</label><br>
+                    <input type="number" name="amount"
+                    placeholder="Enter amount">
+                </p>
+
+                <p>
+                    <label>Receiver:</label><br>
+                    <input type="text" name="receiver"
+                    placeholder="Enter receiver's name">
+                </p>
+
+                <p>
+                    <label>Date:</label><br>
+                    <input type="date" name="date">
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="mobile-section">
+
+            <div class="mobile-choice">
+
+                <label>
+                    <input type="radio" name="payment"
+                    value="Mobile Payment" id="mobile">
+                    Mobile Payment
+                </label>
+
+                <select id="mobilePayment" disabled>
+
+                    <option value="">Select network</option>
+                    <option value="Mpesa">Mpesa</option>
+                    <option value="Airtel">Airtel</option>
+                    <option value="Yas">Yas</option>
+                    <option value="Selcom">Selcom</option>
+                    <option value="Halotel">Halotel</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <button type="submit">Submit</button>
+
+    <button type="reset">Clear</button>
+
+    <p id="message"></p>
+
+</form>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+    const payment = document.querySelectorAll(
+        'input[name="payment"]'
+    );
+
+    const cashRadio = document.getElementById("cash");
+    const mobileRadio = document.getElementById("mobile");
+    const cashDetails = document.getElementById("cashDetails");
+    const mobile = document.getElementById("mobilePayment");
+    const patientForm = document.getElementById("patientForm");
+
+
+    // RADIO BUTTON TOGGLE
+
+    payment.forEach(function(option) {
+
+        option.addEventListener("click", function(event) {
+
+            const wasSelected = this.dataset.selected === "true";
+
+            if (wasSelected) {
+
+                event.preventDefault();
+
+                const selectedRadio = this;
+
+                setTimeout(function() {
+                    selectedRadio.checked = false;
+                    selectedRadio.dataset.selected = "false";
+                    updatePayment();
+                }, 0);
+
+                return;
+
+            } else {
+
+                payment.forEach(function(radio) {
+                    radio.dataset.selected = "false";
+                });
+
+                this.dataset.selected = "true";
+
+                updatePayment();
+
+            }
+
+        });
+
+    });
+
+
+    // UPDATE PAYMENT DISPLAY
+
+    function updatePayment() {
+
+        cashDetails.style.display =
+            cashRadio.checked ? "block" : "none";
+
+        mobile.disabled = !mobileRadio.checked;
+        mobile.required = mobileRadio.checked;
+
+        mobile.style.display =
+           mobileRadio.checked ? "inline-block" : "none";
+
+        if (!cashRadio.checked) {
+            document.querySelector('[name="amount"]').value = "";
+            document.querySelector('[name="receiver"]').value = "";
+            document.querySelector('[name="date"]').value = "";
+        }
+
+        if (!mobileRadio.checked) {
+            mobile.value = "";
+        }
+
+    }
+
+<p>TRICIA</p>
+    // FORM SUBMISSION
+
+    patientForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const selectedPayment = document.querySelector(
+            'input[name="payment"]:checked'
+        );
+
+        if (!selectedPayment) {
+
+            alert("Please select a payment method.");
+            return;
+
+        }
+
+        if (!this.checkValidity()) {
+
+            this.reportValidity();
+            return;
+
+        }
+
+        if (selectedPayment.value === "Mobile Payment" && !mobile.value) {
+
+            alert("Please select a mobile payment network.");
+            return;
+
+        }
+
+        document.getElementById("message").innerHTML =
+            "Patient registration submitted successfully!";
+
+    });
+
+
+    // CLEAR FORM
+
+    patientForm.addEventListener("reset", function() {
+
+        cashDetails.style.display = "none";
+
+        payment.forEach(function(radio) {
+            radio.dataset.selected = "false";
+        });
+        mobile.disabled = true;
+        mobile.required = false;
+        mobile.value = "";
+        document.getElementById("message").innerHTML = "";
+    });
+</script>
+</body>
+</html><p>TRICIA</p>
